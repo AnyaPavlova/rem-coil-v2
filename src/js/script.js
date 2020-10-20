@@ -1,7 +1,7 @@
-$(document).ready(function () {   
+$(document).ready(function () {
 
     var choiseLangBtn = document.querySelector('#language-btn');
-    if(choiseLangBtn) {
+    if (choiseLangBtn) {
         choiseLangBtn.addEventListener('click', openChoiseLang);
 
         function openChoiseLang(event) {
@@ -10,8 +10,8 @@ $(document).ready(function () {
         }
 
         document.addEventListener('click', closeChoiseLang);
-        function closeChoiseLang(event) {            
-            if( !(event.target.closest('.language')) ) {
+        function closeChoiseLang(event) {
+            if (!(event.target.closest('.language'))) {
                 choiseLangBtn.classList.remove('language__lang--active');
                 choiseLangBtn.parentNode.querySelector('.language__choise-block').classList.remove('language__choise-block--active');
             }
@@ -19,25 +19,25 @@ $(document).ready(function () {
     }
 
     var searchBtn = document.querySelector('#search-btn');
-    if(searchBtn) {
+    if (searchBtn) {
         searchBtn.addEventListener('click', openSearchBlock);
-        var searchBlock = document.querySelector('#search-block');   
+        var searchBlock = document.querySelector('#search-block');
         function openSearchBlock(event) {
             searchBlock.classList.add('top-line__search--open');
         }
 
         var btnCloseSearch = searchBlock.querySelector('#search-close');
-        btnCloseSearch.addEventListener('click', ()=>{searchBlock.classList.remove('top-line__search--open');})
+        btnCloseSearch.addEventListener('click', () => { searchBlock.classList.remove('top-line__search--open'); })
 
         document.addEventListener('click', closeSearchBlock);
-        function closeSearchBlock(event) {     
-            var eventTarget = event.target;       
-            if( !(eventTarget.closest('#search-block')) && !(eventTarget.closest('#search-btn'))  ) {                
+        function closeSearchBlock(event) {
+            var eventTarget = event.target;
+            if (!(eventTarget.closest('#search-block')) && !(eventTarget.closest('#search-btn'))) {
                 searchBlock.classList.remove('top-line__search--open');
             }
         }
     }
-    
+
     $('#promo-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -73,6 +73,47 @@ $(document).ready(function () {
             }
         ]
     });
+
+    var videoArr = document.querySelectorAll('.video');
+    if (videoArr.length !== 0) {
+
+        for (var i = 0; i < videoArr.length; i++) {
+            videoArr[i].querySelector('.video__img').addEventListener('click', playVideo);
+
+            function playVideo(event) {
+                closeVideo();
+
+                this.classList.add('video__img--hide');
+                this.closest('.video').querySelector('.video__video').classList.add('video__video--active');
+
+                var iframeItem = this.closest('.video').querySelector('iframe');
+                var src = iframeItem.src;
+                iframeItem.src = src + '&autoplay=1';
+            }
+        }
+
+        document.addEventListener('click', closeAllVideo);
+        function closeAllVideo(event) {
+            var eventTarget = event.target;
+            if (!(eventTarget.closest('.video'))) {
+                closeVideo();
+            }
+        }
+        function closeVideo() {
+            var activeVideo = document.querySelector('.video__video--active');
+            if (activeVideo) {
+                activeVideo.classList.remove('video__video--active');
+                activeVideo.closest('.video').querySelector('.video__img').classList.remove('video__img--hide');
+
+                var iframeItem = activeVideo.closest('.video').querySelector('iframe');
+                var src = iframeItem.src;
+                var indexSrcAuto = src.indexOf('&autoplay=1');
+                src = src.slice(0, indexSrcAuto);
+                iframeItem.src = src;
+            }
+        }
+
+    }
 
 })
 

@@ -74,6 +74,50 @@ $(document).ready(function () {
       }
     }]
   });
+  var videoArr = document.querySelectorAll('.video');
+
+  if (videoArr.length !== 0) {
+    var i;
+
+    (function () {
+      var closeAllVideo = function closeAllVideo(event) {
+        var eventTarget = event.target;
+
+        if (!eventTarget.closest('.video')) {
+          closeVideo();
+        }
+      };
+
+      var closeVideo = function closeVideo() {
+        var activeVideo = document.querySelector('.video__video--active');
+
+        if (activeVideo) {
+          activeVideo.classList.remove('video__video--active');
+          activeVideo.closest('.video').querySelector('.video__img').classList.remove('video__img--hide');
+          var iframeItem = activeVideo.closest('.video').querySelector('iframe');
+          var src = iframeItem.src;
+          var indexSrcAuto = src.indexOf('&autoplay=1');
+          src = src.slice(0, indexSrcAuto);
+          iframeItem.src = src;
+        }
+      };
+
+      for (i = 0; i < videoArr.length; i++) {
+        var playVideo = function playVideo(event) {
+          closeVideo();
+          this.classList.add('video__img--hide');
+          this.closest('.video').querySelector('.video__video').classList.add('video__video--active');
+          var iframeItem = this.closest('.video').querySelector('iframe');
+          var src = iframeItem.src;
+          iframeItem.src = src + '&autoplay=1';
+        };
+
+        videoArr[i].querySelector('.video__img').addEventListener('click', playVideo);
+      }
+
+      document.addEventListener('click', closeAllVideo);
+    })();
+  }
 });
 /*Полифилы для ie*/
 

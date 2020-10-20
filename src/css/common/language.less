@@ -1,8 +1,13 @@
 .language {
     position: relative;
+    margin-left: 50px;
+
+    @media screen and (max-width: 1380px) {
+        margin-left: 0;
+    }
 
     &__lang {
-        font-size     : 15px;
+        font-size     : 18px;
         font-weight   : 700;
         color         : #ffffff;
         letter-spacing: -1px;
@@ -10,8 +15,8 @@
         display       : inline-block;
         cursor        : pointer;
 
-        width          : 50px;
-        height         : 50px;
+        width          : 53px;
+        height         : 53px;
         display        : flex;
         align-items    : center;
         align-content  : center;
@@ -26,14 +31,14 @@
             content        : '';
             display        : block;
             width          : 10px;
-            height         : 5px;
+            height         : 6px;
             position       : absolute;
             top            : 0;
             bottom         : 0;
             // right          : -15px;
-            right: 7px;
+            right: 2px;
             margin         : auto;
-            background     : url(../images/icons/caret_down.svg) no-repeat center;
+            background     : url(../images/icons/caret_down-2.svg) no-repeat center;
             background-size: contain;
         }
     }
