@@ -1,0 +1,27 @@
+.geography {
+    background: @color-blue;
+
+    &__title-block {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.8);
+    }
+    &__title {
+        color: @color-blue;
+        text-align: center;
+    }
+    &__map {
+        margin: 0 auto 0 70px;
+
+        @media screen and (min-width: 1921px) {
+            margin: auto;
+        }
+        @media screen and (max-width: 1440px) { 
+            margin: auto;
+        }
+    }
+}

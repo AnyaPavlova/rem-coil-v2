@@ -1,0 +1,177 @@
+.promo {
+    background: url(../images/promo-bg.jpg) no-repeat center bottom;
+    position  : relative;
+    height: 729px;
+
+    display      : flex;
+    align-content: center;
+    align-items  : center;
+
+    @media screen and (min-width: 1921px) {
+        background-size: cover;
+    }
+
+    &:before {
+        content         : '';
+        display         : block;
+        width           : 100%;
+        height          : 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        position        : absolute;
+        left            : 0;
+        right           : 0;
+        top             : 0;
+        bottom          : 0;
+    }
+
+    &__inner {
+        max-width: 100%;
+        width    : 1500px;
+        height: auto;
+    }
+
+    &__for-slider {
+        position: relative;
+    }
+
+    &__slider-item {
+        background   : rgba(0, 0, 0, 0.439958);
+        border-radius: 3px;
+        padding      : 60px 100px 67px;
+        text-align   : center;
+        color        : #ffffff;
+        display      : none;
+    }
+
+    &__slider-title {
+        padding-bottom: 15px;
+        font-size     : 54px;
+    }
+
+    &__slider-text {
+        max-width     : 900px;
+        margin        : auto;
+        font-size     : 20px;
+        padding-bottom: 25px;
+    }
+
+    &__slider-nav-btn {
+        position  : absolute;
+        top       : 0;
+        bottom    : 0;
+        margin    : auto;
+        width     : 14px;
+        height    : 24px;
+        cursor    : pointer;
+        opacity   : 0.3;
+        transition: all 0.5s;
+
+        @media screen and (min-width: 961px) {
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__slider-nav-btn--before {
+        left      : 57px;
+        // opacity: 0.3;
+        background: url(../images/icons/slider-left-white.svg) no-repeat center;
+    }
+
+    &__slider-nav-btn--after {
+        right     : 57px;
+        background: url(../images/icons/slider-right-white.svg) no-repeat center;
+    }
+}
+
+.promo__slider .slick-track {
+    display: flex;
+}
+
+.promo__slider .slick-slide {
+    height: auto;
+}
+
+.promo__slider-dots {
+    position: absolute;
+    bottom  : 38px;
+    left    : 0;
+    right   : 0;
+}
+
+.promo__slider-dots .slick-dots {
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: center;
+    align-content  : center;
+    align-items    : center;
+    list-style     : none;
+
+    li {
+        line-height: 0;
+        font-size  : 0;
+    }
+
+    button {
+        font-size    : 0;
+        width        : 33px;
+        height       : 33px;
+        border-radius: 50%;
+        position     : relative;
+
+        &:before {
+            content      : '';
+            display      : block;
+            width        : 12px;
+            height       : 12px;
+            background   : #ffffff;
+            position     : absolute;
+            left         : 0;
+            right        : 0;
+            top          : 0;
+            bottom       : 0;
+            margin       : auto;
+            border-radius: 50%;
+            opacity      : 0.8;
+        }
+    }
+
+    .slick-active button:before {
+        width           : 16px;
+        height          : 16px;
+        background-color: @color-orange;
+        opacity         : 1;
+    }
+
+    .slick-active button:after {
+        content        : '';
+        display        : block;
+        width          : 100%;
+        height         : 100%;
+        position       : absolute;
+        left           : 0;
+        top            : 0;
+        background     : url(../images/icons/dots-active-bg.svg) no-repeat center;
+        background-size: contain;
+        animation: rotateActiveDot 2s infinite linear;
+    }
+}
+
+@keyframes rotateActiveDot {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.promo__slider-item.slick-active {
+    .promo-slider__text {
+        opacity: 1;
+    }
+    .promo-slider__image img {
+        width: 100%;
+    }
+}

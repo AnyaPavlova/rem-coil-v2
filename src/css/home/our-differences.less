@@ -1,0 +1,50 @@
+.our-differences {
+    padding: 135px 0 95px;
+    background: url(../images/our-differences-bg.jpg) no-repeat center;
+
+    &__container {
+        max-width: 865px;
+        margin-left: auto;
+    }
+
+    &__main-info {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+    &__title {
+        color: @color-orange;
+        padding: 0 20px;
+        width: 630px;
+        max-width: 100%;
+        font-weight: 700;
+    }
+
+    &__item {
+        padding: 0 0 45px 20px;
+        position: relative;
+        color: #ffffff;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 2px;
+            height: 37px;
+            background: @color-orange;
+            position: absolute;
+            left: 0;
+            top: 5px;
+        }
+    }
+    &__name {
+        font-size: 20px;
+        font-weight: 500;
+        padding-bottom: 5px;
+    }
+    &__text {
+        line-height: 1.1;
+        color: #BDBDBD;
+    }
+}

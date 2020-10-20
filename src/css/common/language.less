@@ -1,0 +1,75 @@
+.language {
+    position: relative;
+
+    &__lang {
+        font-size     : 15px;
+        font-weight   : 700;
+        color         : #ffffff;
+        letter-spacing: -1px;
+        position      : relative;
+        display       : inline-block;
+        cursor        : pointer;
+
+        width          : 50px;
+        height         : 50px;
+        display        : flex;
+        align-items    : center;
+        align-content  : center;
+        padding: 6px;
+        border: 1px solid transparent;
+
+        &--active {
+            border-color: #F2994A;
+        }
+
+        &:after {
+            content        : '';
+            display        : block;
+            width          : 10px;
+            height         : 5px;
+            position       : absolute;
+            top            : 0;
+            bottom         : 0;
+            // right          : -15px;
+            right: 7px;
+            margin         : auto;
+            background     : url(../images/icons/caret_down.svg) no-repeat center;
+            background-size: contain;
+        }
+    }
+    &__choise-block {
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background: #ffffff;        
+        border: 1px solid #F2994A;
+        border-top: 0;
+        z-index: 10;
+
+        &--active {
+            display: block;
+        }
+    }
+    &__choise-item {
+        display: flex;
+        width: 100%;
+        height: 40px;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        color: #C2C2C2;
+        transition: all 0.5s;
+
+        @media screen and (min-width: 961px) {
+            &:hover {
+                background-color: @color-orange;
+                color: #ffffff;
+            }
+        }
+    }
+}

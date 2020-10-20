@@ -1,0 +1,51 @@
+.clients {
+    padding: 120px 0 100px;
+
+    &__inner {
+        max-width: 1410px;
+    }
+
+    &__title-block {
+        padding-bottom: 20px;
+    }
+
+    &__title {
+        padding-bottom: 20px;
+    }
+
+    &__title-text {
+        font-size: 20px;
+    }
+
+    &__list {
+        display        : flex;
+        flex-wrap      : wrap;
+        justify-content: space-between;
+        align-content  : center;
+        align-items    : center;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    &__item {
+        width: 20%;
+        display  : block;
+        padding: 20px 10px;
+    }
+
+    &__logo {                
+        webkit-filter: grayscale(1);
+        filter: grayscale(1);
+        opacity: 0.3;
+        margin: auto;
+        max-height: 80px;
+    }
+
+}
+
+@media screen and (min-width: 961px) {
+    .clients__item:hover .clients__logo {
+        filter: none;
+        opacity: 1;
+    }
+}

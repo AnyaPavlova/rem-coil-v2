@@ -1,0 +1,100 @@
+* {
+  margin    : 0;
+  padding   : 0;
+  border    : none;
+  box-sizing: border-box;
+  outline   : none;
+}
+
+main,
+article,
+section,
+footer,
+header,
+aside,
+canvas {
+  display: block;
+}
+
+section,
+header,
+footer {
+  position: relative;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-width       : 320px;
+  min-height      : 100%;
+  background-color: #ffffff;
+
+  font-family   : @font;
+  font-size     : 16px;
+  line-height   : 1.5;
+  font-weight   : 400;
+  letter-spacing: 0em;
+  color         : #000000;
+
+  position: relative;
+
+  @media screen and (max-width: 1600px) { position: relative;}
+  @media screen and (max-width: 1440px) { position: relative;}
+  @media screen and (max-width: 1380px) { position: relative;}  /*inner - 1320px + 30px*2 */
+  @media screen and (max-width: 1200px) { position: relative;}  /*lg*/
+  @media screen and (max-width: 960px) { position: relative;}  /*md*/
+  @media screen and (max-width: 670px) { position: relative;}  /*sm*/
+
+  @media screen and (min-width: 1921px) { position: relative; }
+  @media screen and (min-width: 961px) { position: relative;}
+}
+
+/* + inner*/
+section:after {
+  content: '';
+  display: block;
+  clear  : both;
+}
+
+button,
+input,
+select {
+  font-family: @font;
+  font-weight: 400;
+}
+
+button {
+  cursor          : pointer;
+  background-color: transparent;
+}
+
+h1,
+h2,
+h3 {
+  font-family: @font;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size     : 36px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+strong {
+  font-weight: 500;
+}
+
+img {
+  max-width: 100%;
+  display  : block;
+}
+
+a {
+  color: inherit;
+}

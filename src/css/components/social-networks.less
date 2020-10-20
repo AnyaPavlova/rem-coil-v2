@@ -1,0 +1,41 @@
+.social-networks {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -6px;
+    margin-right: -6px;
+
+    &__link {
+        margin-left: 6px;
+        margin-right: 6px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: @color-blue;
+
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+
+        transition: all 0.5s;
+
+        &--fb {
+            align-content: flex-end;
+            align-items: flex-end;
+
+            svg {
+                margin-bottom: -2px;
+            }
+        }
+
+        svg {
+            fill: #ffffff;            
+        }
+
+        @media screen and (min-width: 961px) {
+            &:hover {
+                background-color: #000000;
+            }
+        }
+    }
+}

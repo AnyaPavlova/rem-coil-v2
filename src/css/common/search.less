@@ -1,0 +1,101 @@
+.search {
+
+    height: 100%;
+
+    &__form {
+        display         : flex;
+        justify-content : flex-start;
+        align-items     : center;
+        align-content   : center;
+        position        : relative;
+        z-index         : 3;
+        transition      : all 0.5s;
+        width           : 100%;
+        max-width       : 100%;
+        border          : 0;
+        height          : 100%;
+        background: #ECECEC;
+        padding: 10px 43px;
+    }
+
+    &__input {
+        -webkit-appearance: none;
+        font-size         : 20px;
+        color             : @color-black;
+        font-weight       : 400;
+        text-transform    : uppercase;
+        background-color  : transparent;
+        padding-left      : 30px;
+        height            : 100%;
+        width: 100%;
+
+        &::-webkit-input-placeholder {
+            color  : #ACACAC;
+            opacity: 1;
+        }
+
+        &::-moz-placeholder {
+            color  : #ACACAC;
+            opacity: 1;
+        }
+
+        /* Firefox 19+ */
+        &:-moz-placeholder {
+            color  : #ACACAC;
+            opacity: 1;
+        }
+
+        /* Firefox 18- */
+        &:-ms-input-placeholder {
+            color  : #ACACAC;
+            opacity: 1;
+        }
+
+        &::-ms-clear {
+            display: none;
+            width  : 0;
+            height : 0;
+        }
+
+        &::-ms-reveal {
+            display: none;
+            width  : 0;
+            height : 0;
+        }
+
+        &::-webkit-search-decoration,
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-results-button,
+        &::-webkit-search-results-decoration {
+            display: none;
+        }
+    }
+
+    &__search-btn {
+        width          : 24px;
+        height         : 24px;
+        background-size: contain;
+
+        svg {
+            fill: @color-orange;
+            width: 24px;
+            height: 24px;
+            transition: all 0.5s;
+        }
+    }
+
+    &__close-btn {
+        position: absolute;
+        right: 43px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 15px;
+        height: 15px;
+        z-index: 5;
+
+        svg path {
+            stroke: @color-orange;
+        }
+    }
+}
