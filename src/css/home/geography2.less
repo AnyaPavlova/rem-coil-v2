@@ -1,0 +1,85 @@
+.geography2 {
+    padding: 60px 0 60px;
+
+    &__block {
+        position: relative;
+        min-height: 633px;
+        display: flex;
+        flex-wrap: wrap;        
+
+        @media screen and (max-width: 1380px) {
+            min-height: 550px;
+        }
+    }
+
+    &__inner {
+        height: auto;
+    }
+
+    &__map-block {
+        position: absolute;
+        left: -91px;
+        top: 0;      
+
+        @media screen and (max-width: 1380px) {
+            left: 0;
+            max-width: 75%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__countrys-block {
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+    }
+
+    &__row {
+        justify-content: flex-end;
+        padding-bottom: 15px;
+    }
+    &__title {
+        margin-bottom: 30px;
+
+        font-size: 36px;
+        text-transform: uppercase;
+
+        text-align: center;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 13px;
+        margin-left: -12px;
+        margin-right: -12px;
+
+        li {
+            min-width: 37%;
+            // width: 25%;
+            padding: 0 12px 12px;
+            font-size: 22px;
+            color: @color-dark-gray;
+
+            @media screen and (max-width: 1380px) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__link {
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    &__form {
+        padding-top: 80px;       
+    }
+    &__form-inner {
+        max-width: 1280px;
+    }
+}

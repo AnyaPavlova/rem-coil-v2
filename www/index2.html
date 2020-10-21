@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница | Rem&Coil</title>
+
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/uncompressed.css">
+    
+    <link rel="shortcut icon" type="image/x-icon" href="./favicons/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="32x32" href="./favicons/apple-icon-32x32.png">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="./favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="./favicons/apple-icon-180x180.png">
+    <link rel="icon" sizes="192x192" href="./favicons/android-icon-192x192.png">    
+
+    <meta content="width=device-width, user-scalable=1, initial-scale=1" name="viewport" />
+
+</head>
+
+<body class="body">
+<header class="header">
+    <div class="contacts-line">
+        <div class="inner">
+            <div class="contacts-line__container">
+                <div class="contacts-line__contacts">
+                    <div class="contacts-line__contact-item"><span class="contacts-line__contact-item-link contacts-line__contact-item-link--adress">Санкт-Петербург</span></div>
+                    <div class="contacts-line__contact-item"><a href="tel:+78123212920" class="contacts-line__contact-item-link contacts-line__contact-item-link--phone">+7 (812) 321-29-20</a></div>
+                    <div class="contacts-line__contact-item"><a href="mailto:gm@remcoil.ru" class="contacts-line__contact-item-link contacts-line__contact-item-link--email">gm@remcoil.ru</a></div>
+                </div>
+                <div class="contacts-line__call-block">
+                    <a href="#" class="contacts-line__call">Обратный звонок</a>
+                </div>
+                <div class="contacts-line__lang-block language">
+                    <span class="language__lang" id="language-btn">RU</span>
+                    <div class="language__choise-block">
+                        <a href="#" class="language__choise-item">EN</a>
+                        <a href="#" class="language__choise-item">RU</a>
+                        <a href="#" class="language__choise-item">UA</a>
+                    </div>
+                </div>
+                <div class="contacts-line__social-block">
+                    <a href="#" class="contacts-line__social-link">
+                        <svg class="contacts-line__social-svg" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.83 11.811V18h-3.622v-5.811c0-1.434-.529-2.415-1.812-2.415-.98 0-1.585.679-1.811 1.283-.076.226-.151.528-.151.905V18H7.811s.076-9.811 0-10.792h3.623v1.509c.453-.755 1.358-1.811 3.245-1.811 2.34 0 4.151 1.585 4.151 4.905zM4.038 2C2.83 2 2 2.83 2 3.887c0 1.056.755 1.887 1.962 1.887C5.245 5.774 6 4.944 6 3.887 6.075 2.755 5.32 2 4.038 2zM2.226 18H5.85V7.208H2.226V18z" /></svg>
+                    </a>
+                    <a href="#" class="contacts-line__social-link">
+                        <svg class="contacts-line__social-svg" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 4.653C18 3.243 16.756 2 15.347 2H4.653C3.243 2 2 3.244 2 4.653v10.694C2 16.757 3.244 18 4.653 18h5.388v-6.052h-1.99V9.295h1.99V8.218c0-1.824 1.327-3.4 2.985-3.4h2.155v2.653h-2.155c-.249 0-.498.25-.498.747v1.077h2.653v2.653H12.53V18h2.818C16.757 18 18 16.756 18 15.347V4.653z" /></svg>
+                    </a>
+                    <a href="#" class="contacts-line__social-link">
+                        <svg class="contacts-line__social-svg" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 2c-2.172 0-2.445.01-3.298.048-.852.04-1.433.174-1.942.372a3.917 3.917 0 00-1.417.922A3.927 3.927 0 002.42 4.76c-.199.51-.333 1.09-.372 1.942C2.01 7.555 2 7.827 2 10s.01 2.444.048 3.298c.04.851.174 1.433.372 1.941.204.527.478.973.923 1.418.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C7.555 17.99 7.827 18 10 18c2.172 0 2.444-.01 3.298-.048.851-.04 1.433-.174 1.942-.372a3.914 3.914 0 001.417-.923c.445-.445.718-.891.923-1.417.197-.51.332-1.09.372-1.942.038-.853.048-1.125.048-3.298s-.01-2.445-.049-3.299c-.04-.851-.175-1.433-.371-1.941a3.926 3.926 0 00-.923-1.417 3.91 3.91 0 00-1.417-.923c-.51-.198-1.092-.333-1.944-.372C12.444 2.01 12.172 2 9.998 2h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.318.919.598.28.28.453.547.599.92.11.282.24.705.275 1.485.038.844.047 1.097.047 3.232 0 2.135-.009 2.388-.047 3.232-.035.78-.166 1.203-.275 1.485-.145.373-.319.639-.599.919-.28.28-.546.453-.92.598-.281.11-.705.24-1.485.276-.843.038-1.096.046-3.232.046-2.137 0-2.39-.008-3.233-.046-.78-.036-1.203-.167-1.486-.276a2.478 2.478 0 01-.92-.598 2.48 2.48 0 01-.598-.92c-.11-.282-.24-.705-.276-1.485-.038-.843-.046-1.097-.046-3.233s.008-2.388.046-3.232c.036-.78.166-1.203.276-1.485.145-.373.318-.64.598-.92.28-.28.547-.453.92-.599.282-.11.706-.24 1.486-.275.738-.034 1.024-.044 2.515-.045v.002zm4.028 2.288a.96.96 0 111.92 0 .96.96 0 01-1.92 0zM10 5.892a4.109 4.109 0 100 8.217 4.109 4.109 0 000-8.217zM12.667 10a2.667 2.667 0 10-5.333 0 2.667 2.667 0 005.333 0z" /></svg>
+                    </a>
+                    <a href="#" class="contacts-line__social-link">
+                        <svg class="contacts-line__social-svg" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.274 4.008l-1.104.02-.622.018-.792.028-.426.02-.419.023-.403.026-.382.03-.182.016-.34.036a5.632 5.632 0 00-.78.133A2.12 2.12 0 002.35 5.874c-.066.253-.12.558-.163.886l-.04.335-.034.344-.028.346-.023.343-.026.494-.018.45-.012.494-.005.493.005.376.012.493.018.45.026.494.023.343.028.347.034.344.019.169.043.328c.04.266.086.513.14.723a2.12 2.12 0 001.477 1.516c.187.052.456.096.78.134l.339.036.182.016.382.03.403.026.419.023.426.02.556.02.927.026 1.262.022 1 .005.566-.004 1.213-.019 1.104-.03.556-.02.426-.02.418-.023.598-.04.37-.032.34-.036c.323-.038.591-.082.779-.134a2.12 2.12 0 001.476-1.515 7.53 7.53 0 00.163-.886l.04-.335.034-.344.028-.347.023-.343.026-.494.017-.45.013-.493.005-.494-.005-.375-.013-.494-.017-.45-.026-.494-.023-.343-.028-.346-.034-.344a16.135 16.135 0 00-.02-.17l-.043-.327a6.882 6.882 0 00-.14-.724 2.12 2.12 0 00-1.476-1.516 5.632 5.632 0 00-.78-.133l-.34-.036-.18-.016-.383-.03-.404-.026-.418-.023-.792-.034-.426-.014-1.016-.026-.71-.012L10.372 4l-1.099.008zm-.491 8.862V7.652l4.174 2.61-4.174 2.608z" /></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="top-line">
+        <div class="inner">
+            <div class="top-line__container">
+                <div class="top-line__logo-block">
+                    <a href="index.html" class="top-line__logo-link"><img src="./images/logo.svg" alt="Logo" class="top-line__logo"></a>
+                </div>
+                <div class="top-line__menu-block">
+                    <div class="top-line__menu">
+                        <nav class="menu">
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link menu__link--active">
+                                        <span class="menu__link-name">Продукция</span>
+                                        <span class="menu__link-more"><svg viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg"><path d="M0 .5l5 5 5-5H0z"/></svg></span>
+                                    </a>
+                                    <ul class="submenu submenu--large">
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Секции статорных обмоток средневольтных и высоковольтных двигателей </a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Секции для тяговых электродвигателей</a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Волновые катушки</a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Секции для низковольтных двигателей</a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Секции якорных обмоток для двигателей постоянного тока</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        <span class="menu__link-name">Производство</span>
+                                        <span class="menu__link-more"><svg viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg"><path d="M0 .5l5 5 5-5H0z"/></svg></span>
+                                    </a>
+                                    <ul class="submenu">
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Производственный процесс</a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Материалы</a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Испытания</a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Упаковка</a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Доставка</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        <span class="menu__link-name">Услуги</span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        <span class="menu__link-name">Пресс-центр</span>
+                                        <span class="menu__link-more"><svg viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg"><path d="M0 .5l5 5 5-5H0z"/></svg></span>
+                                    </a>
+                                    <ul class="submenu">
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Выпоненные проекты</a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Новости</a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Мероприятия</a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Статьи</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        <span class="menu__link-name">Карьера</span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        <span class="menu__link-name">Холдинг</span>
+                                        <span class="menu__link-more"><svg viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg"><path d="M0 .5l5 5 5-5H0z"/></svg></span>
+                                    </a>
+                                    <ul class="submenu">
+                                        <li class="submenu__item"><a href="#" class="submenu__link">О компании</a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Контакты</a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Сотрудники</a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Вакансии</a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Клиенты и отзывы</a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Партнерам</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="top-line__search-block">
+                        <span class="top-line__search-btn" id="search-btn">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z" /></svg>
+                        </span>
+                    </div>
+                    <div class="top-line__search" id="search-block">
+                        <div class="search">
+                            <form class="search__form" id="search-form" role="search" method="get" action="">
+                                <button class="search__search-btn" type="submit">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z" /></svg>
+                                </button>
+                                <input class="search__input" type="search" placeholder="Поиск по сайту..." value="" name="search">
+                            </form>
+                            <button id="search-close" class="search__close-btn">
+                                <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2l24 24m0-24L2 26" stroke-width="3"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="main">
+
+<section class="promo">
+    <div class="inner promo__inner">
+        <div class="promo__for-slider">
+            <div class="promo__slider" id="promo-slider">
+                <div class="promo__slider-item">
+                    <div class="promo__slider-inner">
+                        <h2 class="promo__slider-title">Надежная система изоляции</h2>
+                        <p class="promo__slider-text">Завод Rem&Coil основан в 2006 г. и является частью Северо-Западного Электромеханического Объединения (год основания 1994 г.).</p>
+                        <div class="promo__slider-btns">
+                            <a href="#" class="btn btn--full-orange promo__slider-btn"><span>Узнать больше</span> <svg viewBox="0 0 9 14" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.94 6.406l-5.43-5.16a.917.917 0 00-1.251 0 .811.811 0 000 1.189L6.065 7l-4.806 4.565a.811.811 0 000 1.189.918.918 0 001.251 0l5.431-5.16A.817.817 0 008.2 7a.817.817 0 00-.259-.594z" /></svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="promo__slider-item">
+                    <div class="promo__slider-inner">
+                        <h2 class="promo__slider-title">Надежная система изоляции2</h2>
+                        <p class="promo__slider-text">Lorem ipsum dolor sit amet.</p>
+                        <div class="promo__slider-btns">
+                            <a href="#" class="btn btn--full-orange promo__slider-btn"><span>Узнать больше</span> <svg viewBox="0 0 9 14" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.94 6.406l-5.43-5.16a.917.917 0 00-1.251 0 .811.811 0 000 1.189L6.065 7l-4.806 4.565a.811.811 0 000 1.189.918.918 0 001.251 0l5.431-5.16A.817.817 0 008.2 7a.817.817 0 00-.259-.594z" /></svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="promo__slider-item">
+                    <div class="promo__slider-inner">
+                        <h2 class="promo__slider-title">Надежная система изоляции3</h2>
+                        <p class="promo__slider-text">Завод Rem&Coil основан в 2006 г. и является частью Северо-Западного Электромеханического Объединения (год основания 1994 г.).</p>
+                        <div class="promo__slider-btns">
+                            <a href="#" class="btn btn--full-orange promo__slider-btn"><span>Узнать больше</span> <svg viewBox="0 0 9 14" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.94 6.406l-5.43-5.16a.917.917 0 00-1.251 0 .811.811 0 000 1.189L6.065 7l-4.806 4.565a.811.811 0 000 1.189.918.918 0 001.251 0l5.431-5.16A.817.817 0 008.2 7a.817.817 0 00-.259-.594z" /></svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="promo__slider-item">
+                    <div class="promo__slider-inner">
+                        <h2 class="promo__slider-title">Надежная система изоляции4</h2>
+                        <p class="promo__slider-text">Завод Rem&Coil основан в 2006 г. и является частью Северо-Западного Электромеханического Объединения (год основания 1994 г.).</p>
+                        <div class="promo__slider-btns">
+                            <a href="#" class="btn btn--full-orange promo__slider-btn"><span>Узнать больше</span> <svg viewBox="0 0 9 14" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.94 6.406l-5.43-5.16a.917.917 0 00-1.251 0 .811.811 0 000 1.189L6.065 7l-4.806 4.565a.811.811 0 000 1.189.918.918 0 001.251 0l5.431-5.16A.817.817 0 008.2 7a.817.817 0 00-.259-.594z" /></svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="promo__slider-item">
+                    <div class="promo__slider-inner">
+                        <h2 class="promo__slider-title">Надежная система изоляции5</h2>
+                        <p class="promo__slider-text">Завод Rem&Coil основан в 2006 г. и является частью Северо-Западного Электромеханического Объединения (год основания 1994 г.).</p>
+                        <div class="promo__slider-btns">
+                            <a href="#" class="btn btn--full-orange promo__slider-btn"><span>Узнать больше</span> <svg viewBox="0 0 9 14" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.94 6.406l-5.43-5.16a.917.917 0 00-1.251 0 .811.811 0 000 1.189L6.065 7l-4.806 4.565a.811.811 0 000 1.189.918.918 0 001.251 0l5.431-5.16A.817.817 0 008.2 7a.817.817 0 00-.259-.594z" /></svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="promo__slider-nav">
+                <span class="promo__slider-nav-btn promo__slider-nav-btn--before" id="promo-slider-prev"></span>
+                <span class="promo__slider-nav-btn promo__slider-nav-btn--after" id="promo-slider-next"></span>
+            </div>
+        </div>
+    </div>
+    <div class="promo__slider-dots"></div>
+</section>
+
+<section class="promo-request">
+    <div class="inner promo-request__inner">
+        <div class="promo-request__container">
+            <div class="promo-request__text">Нет времени? Оставьте заявку на консультацию!</div>
+            <div class="promo-request__for-btns">
+                <a href="#" class="btn btn--empty-white promo-request__btn"><span>Оставить заявку</span> <svg viewBox="0 0 9 14" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.94 6.406l-5.43-5.16a.917.917 0 00-1.251 0 .811.811 0 000 1.189L6.065 7l-4.806 4.565a.811.811 0 000 1.189.918.918 0 001.251 0l5.431-5.16A.817.817 0 008.2 7a.817.817 0 00-.259-.594z" /></svg></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-us2">
+    <div class="inner about-us2__inner">
+        <div class="about-us2__container row row--small about-us2__row">
+            <div class="about-us2__text-block col col-8">
+                <h1 class="about-us2__title"><span class="about-us2__title-name">Rem&Coil</span></h1>
+                <p class="about-us2__text">Завод Rem&Coil основан в 2006 г. и является частью <nobr>Северо-Западного</nobr> Электромеханического Объединения (год основания 1994 г.).</p>
+                <p class="about-us2__text">Автоматизированная линия состоит из станков, которые являются лучшими образцами оборудования данной отрасли, произведенными в Японии, Германии, США и России. Мы производим более 130 000 катушек в год.</p>
+                <p class="about-us2__text">Сегодня Rem&Coil - единственная полностью автоматизированная компания по производству катушек в России. Мы поставляем нашу продукцию по всему миру от Японии до Перу.</p>
+                <div class="about-us2__btns-block">
+                    <a href="#" class="btn btn--full-orange-black promo__slider-btn"><span>Узнать больше</span> <svg viewBox="0 0 6 10" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.784 4.505L1.258.205a.764.764 0 00-1.042 0 .676.676 0 000 .99L4.22 5 .216 8.805a.676.676 0 000 .99.765.765 0 001.042 0l4.526-4.3A.68.68 0 006 5a.68.68 0 00-.216-.495z" /></svg></a>
+                </div>
+            </div>
+        </div>
+        <div class="about-us2-promo">
+            <div class="row about-us2-promo__row">
+                <div class="col col-4 about-us2-promo__col">
+                    <div class="about-us2-promo__item">
+                        <img src="./images/home/photo/01.jpg" alt="432x280px" class="about-us2-promo__photo">
+                    </div>
+                    <div class="row about-us2-promo__row">
+                        <div class="col col-6 about-us2-promo__col">
+                            <div class="about-us2-promo__item">
+                                <img src="./images/home/photo/02.jpg" alt="210x140px" class="about-us2-promo__photo">
+                            </div>
+                        </div>
+                        <div class="col col-6 about-us2-promo__col">
+                            <div class="about-us2-promo__item">
+                                <img src="./images/home/photo/03.jpg" alt="210x140px" class="about-us2-promo__photo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-4 about-us2-promo__col">
+                    <div class="row about-us2-promo__row">
+                        <div class="col col-6 about-us2-promo__col">
+                            <div class="about-us2-promo__item">
+                                <img src="./images/home/photo/04.jpg" alt="210x140px" class="about-us2-promo__photo">
+                            </div>
+                        </div>
+                        <div class="col col-6 about-us2-promo__col">
+                            <div class="about-us2-promo__item">
+                                <img src="./images/home/photo/05.jpg" alt="210x140px" class="about-us2-promo__photo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-us2-promo__item">
+                        <div class="video">
+                            <div class="video__img video__img2">
+                                <img src="./images/home/photo/06.jpg" alt="432x280px" class="about-us2-promo__photo">
+                            </div>
+                            <div class="video__video">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/JyQLjEADGWk?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen rel=0></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-4 about-us2-promo__col">
+                    <div class="about-us2-promo__item">
+                        <img src="./images/home/photo/07.jpg" alt="432x280px" class="about-us2-promo__photo">
+                    </div>
+                    <div class="row about-us2-promo__row">
+                        <div class="col col-6 about-us2-promo__col">
+                            <div class="about-us2-promo__item">
+                                <img src="./images/home/photo/08.jpg" alt="210x140px" class="about-us2-promo__photo">
+                            </div>
+                        </div>
+                        <div class="col col-6 about-us2-promo__col">
+                            <div class="about-us2-promo__item">
+                                <img src="./images/home/photo/09.jpg" alt="210x140px" class="about-us2-promo__photo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="our-numbers">
+    <div class="inner our-numbers__inner">
+        <div class="row our-numbers__row">
+            <div class="col our-numbers__col">
+                <div class="our-numbers__item">
+                    <div class="our-numbers__icon-block">
+                        <img src="./images/home/our-numbers-1.svg" alt="Photo" class="our-numbers__icon">
+                    </div>
+                    <div class="our-numbers__text-block">
+                        работаем <br><span>25 лет</span><br>на рынке
+                    </div>
+                </div>
+            </div>
+            <div class="col our-numbers__col">
+                <div class="our-numbers__item">
+                    <div class="our-numbers__icon-block">
+                        <img src="./images/home/our-numbers-2.svg" alt="Photo" class="our-numbers__icon">
+                    </div>
+                    <div class="our-numbers__text-block">
+                        производим <br><span>130 000 шт</span><br>катушек в год
+                    </div>
+                </div>
+            </div>
+            <div class="col our-numbers__col">
+                <div class="our-numbers__item">
+                    <div class="our-numbers__icon-block">
+                        <img src="./images/home/our-numbers-3.svg" alt="Photo" class="our-numbers__icon">
+                    </div>
+                    <div class="our-numbers__text-block">
+                        годовой оборот <br>
+                        <span>3,75 млн</span><br>
+                        долларов
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="promo-production">
+    <div class="inner">
+        <h2 class="promo-production__title">Продукция</h2>
+        <div class="promo-production__info">
+            <div class="promo-production__text">Завод Rem&Coil основан в 2006 г. и является частью <nobr>Северо-Западного</nobr> Электромеханического Объединения (год основания 1994 г.).</div>
+            <div class="promo-production__btns-block">
+                <a href="#" class="btn btn--full-orange-black"><span>Смотреть все</span> <svg viewBox="0 0 9 14" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.94 6.406l-5.43-5.16a.917.917 0 00-1.251 0 .811.811 0 000 1.189L6.065 7l-4.806 4.565a.811.811 0 000 1.189.918.918 0 001.251 0l5.431-5.16A.817.817 0 008.2 7a.817.817 0 00-.259-.594z" /></svg></a>
+            </div>
+        </div>
+        <div class="promo-production__for-slider">
+            <div class="promo-production__slider slider-items">
+                <a href="#" class="promo-production__slider-item slider-items__item">
+                    <div class="slider-items__info">
+                        <div class="promo-production__slider-photo slider-items__photo">
+                            <img src="./images/home/goods/sekcii-yakornyh-obmotok-dlya-dvigateley-postoyannogo-toka.jpg" alt="Photo" class="promo-production__slider-img slider-items__img">
+                        </div>
+                        <div class="promo-production__slider-text-block slider-items__text">
+                            <div class="promo-production__slider-text">Секции якорных обмоток для двигателей постоянного тока</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="promo-production__slider-item slider-items__item">
+                    <div class="slider-items__info">
+                        <div class="promo-production__slider-photo slider-items__photo">
+                            <img src="./images/home/goods/sekcii-dlya-tyagovyh-lektrodvigateley.jpg" alt="Photo" class="promo-production__slider-img slider-items__img">
+                        </div>
+                        <div class="promo-production__slider-text-block slider-items__text">
+                            <div class="promo-production__slider-text">Секции для тяговых электродвигателей</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="promo-production__slider-item slider-items__item">
+                    <div class="slider-items__info">
+                        <div class="promo-production__slider-photo slider-items__photo">
+                            <img src="./images/home/goods/sekcii-dlya-vysokovoltnyh-lektrodvigateley-i-generatorov.jpg" alt="Photo" class="promo-production__slider-img slider-items__img">
+                        </div>
+                        <div class="promo-production__slider-text-block slider-items__text">
+                            <div class="promo-production__slider-text">Секции для высоковольтных электродвигателей и генераторов </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="promo-production__slider-item slider-items__item">
+                    <div class="slider-items__info">
+                        <div class="promo-production__slider-photo slider-items__photo">
+                            <img src="./images/home/goods/sekcii-dlya-nizkovoltnyh-lektrodvigateley-i-generatorov.jpg" alt="Photo" class="promo-production__slider-img slider-items__img">
+                        </div>
+                        <div class="promo-production__slider-text-block slider-items__text">
+                            <div class="promo-production__slider-text">Секции для низковольтных электродвигателей и генераторов </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="promo-production__slider-item slider-items__item">
+                    <div class="slider-items__info">
+                        <div class="promo-production__slider-photo slider-items__photo">
+                            <img src="./images/home/slide-product-1.jpg" alt="Photo" class="promo-production__slider-img slider-items__img">
+                        </div>
+                        <div class="promo-production__slider-text-block slider-items__text">
+                            <div class="promo-production__slider-text">Секции статорных обмоток средневольтных и высоковольтных двигателей </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="promo-production__slider-item slider-items__item">
+                    <div class="slider-items__info">
+                        <div class="promo-production__slider-photo slider-items__photo">
+                            <img src="./images/home/slide-product-2.jpg" alt="Photo" class="promo-production__slider-img slider-items__img">
+                        </div>
+                        <div class="promo-production__slider-text-block slider-items__text">
+                            <div class="promo-production__slider-text">Секции для тяговых электродвигателей</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="promo-production__slider-item slider-items__item">
+                    <div class="slider-items__info">
+                        <div class="promo-production__slider-photo slider-items__photo">
+                            <img src="./images/home/slide-product-3.jpg" alt="Photo" class="promo-production__slider-img slider-items__img">
+                        </div>
+                        <div class="promo-production__slider-text-block slider-items__text">
+                            <div class="promo-production__slider-text">Секции для низковольтных двигателей</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="promo-production__slider-item slider-items__item">
+                    <div class="slider-items__info">
+                        <div class="promo-production__slider-photo slider-items__photo">
+                            <img src="./images/home/slide-product-4.jpg" alt="Photo" class="promo-production__slider-img slider-items__img">
+                        </div>
+                        <div class="promo-production__slider-text-block slider-items__text">
+                            <div class="promo-production__slider-text">Секции для низковольтных двигателей</div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="our-differences">
+    <div class="inner our-differences__inner">
+        <div class="our-differences__container">
+            <div class="our-differences__main-info">
+                <h2 class="our-differences__title">Отличие нашей продукции</h2>
+            </div>
+            <div class="our-differences__info-block">
+                <div class="row our-differences__row">
+                    <div class="col col-6 our-differences__col">
+                        <div class="our-differences__item">
+                            <p class="our-differences__name"><span>Надежная</span> система изоляции</p>
+                            <p class="our-differences__text">Плотное и ровное прилегание витков провода друг к другу. Монолитная корпусная изоляция, наложенная с равномерным нахлестом. Специально отобранные качественные материалы</p>
+                        </div>
+
+                        <div class="our-differences__item">
+                            <p class="our-differences__name"><span>Точные</span> геометрические размеры</p>
+                            <p class="our-differences__text">Единовременная растяжка каждой секции на роботизированных станках с выдержкой всех размеров, указанных в чертежах и расчетах. Точная опрессовка пазовой части катушек с допуском ± 0,1 мм. Идентичность всех секций в комплекте</p>
+                        </div>
+                    </div>
+                    <div class="col col-6 our-differences__col">
+                        <div class="our-differences__item">
+                            <p class="our-differences__name"><span>Гарантированное</span> качество</p>
+                            <p class="our-differences__text">Высокая электрическая прочность витковой и корпусной изоляции. Пооперационный технологическый контроль. Неразрушающие испытания на высокоточном оборудовании. Соответствие секций требованиям российских и международных стандартов</p>
+                        </div>
+
+                        <div class="our-differences__item">
+                            <p class="our-differences__name"><span>Короткий</span> срок изготовления</p>
+                            <p class="our-differences__text">Автоматизированная высокопроизводительная линия. Запасы материалов на складе. Работа 24 часа в сутки, 7 дней в неделю, 365 дней в году</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="promo-request">
+    <div class="inner">
+        <div class="promo-request__container">
+            <div class="promo-request__text">Как заказать у нас продукцию? Отправьте нам форму!</div>
+            <div class="promo-request__for-btns">
+                <a href="#" class="btn btn--empty-white promo-request__btn"><span>Форма заказа</span> <svg viewBox="0 0 9 14" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.94 6.406l-5.43-5.16a.917.917 0 00-1.251 0 .811.811 0 000 1.189L6.065 7l-4.806 4.565a.811.811 0 000 1.189.918.918 0 001.251 0l5.431-5.16A.817.817 0 008.2 7a.817.817 0 00-.259-.594z" /></svg></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="geography2">
+    <div class="inner geography2__inner">
+        <h2 class="geography2__title">ГЕОГРАФИЯ ПОСТАВОК</h2>
+    </div>
+
+    <div class="geography2__block">
+        <div class="inner geography2__inner">
+            <div class="geography2__map-block">
+                <img src="./images/home/map2.svg" alt="Photo" class="geography2__map">
+            </div>
+            <div class="geography2__countrys-block">
+                <div class="geography2__row row row--small">
+                    <div class="col col-3 geography2__col">
+                        <ul class="geography2__list">
+                            <li>Китай</li>
+                            <li>Украина</li>
+                            <li>Сомали</li>
+                            <li>Англия</li>
+                            <li>Оман</li>
+                            <li>Израиль</li>
+                            <li>Италия</li>
+                            <li>Сауд. Аравия</li>
+                            <li>Иран</li>
+                            <li>Греция</li>
+                            <li>Турция</li>
+                            <li>Мексика</li>
+                            <li>Египет</li>
+                            <li>Япония</li>
+                            <li>Чили</li>
+                            <li>Куба</li>
+                        </ul>
+                        <p class="geography2__block-link">
+                            <a href="#" class="geography2__link">И еще в 34 страны</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="geography2__form">
+        <div class="inner geography2__form-inner">
+
+            <form class="country-partner-form2__form form" action="" method="post" novalidate>
+                <div class="country-partner-form2__row">
+                    <div class="country-partner-form2__title-block">
+                        <h3 class="country-partner-form2__title">Поставляет ли Rem&Coil <nobr>в вашу</nobr> страну?</h3>
+                    </div>
+                    <div class="country-partner-form2__block-form">
+                        <div class="country-partner-form2__fields-block">
+                            <div class="country-partner-form2__item country-partner-form2__item--input">
+                                <div class="country-partner-form2__for-input">
+                                    <input type="text" name="country" class="country-partner-form2__input" placeholder="Введите страну" required>
+                                </div>
+                            </div>
+                            <div class="country-partner-form2__item">
+                                <div class="country-partner-form2__for-btn">
+                                    <button type="submit" class="btn btn--full-orange-black country-partner-form2__btn"><span>Проверить</span> <svg viewBox="0 0 9 14" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.94 6.406l-5.43-5.16a.917.917 0 00-1.251 0 .811.811 0 000 1.189L6.065 7l-4.806 4.565a.811.811 0 000 1.189.918.918 0 001.251 0l5.431-5.16A.817.817 0 008.2 7a.817.817 0 00-.259-.594z" /></svg></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="form__message"></p>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</section>
+
+<section class="clients">
+    <div class="inner clients__inner">
+        <div class="clients__title-block">
+            <h2 class="clients__title">Наши клиенты и партнеры</h2>
+        </div>
+        <div class="clients__block">
+            <h4 class="clients__subtitle">Партнеры</h4>
+            <div class="clients__list row row--small">
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/20.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/22.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/23.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/26.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/27.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/19.png" alt="Logo" class="clients__logo"></a>
+                </div>
+            </div>
+        </div>
+        <div class="clients__block">
+            <h4 class="clients__subtitle">Россия</h4>
+            <div class="clients__list row row--small">
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/14.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/12.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/10.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/28.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/25.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/18.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/11.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/07.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/08.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/24.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/13.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/17.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/29.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/30.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/31.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/15.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/09.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/16.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/21.png" alt="Logo" class="clients__logo"></a>
+                </div>
+            </div>
+        </div>
+        <div class="clients__block">
+            <h4 class="clients__subtitle">Зарубеж</h4>
+            <div class="clients__list row row--small">
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/05.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/01.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/03.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/02.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/06.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/32.png" alt="Logo" class="clients__logo"></a>
+                </div>
+                <div class="col col-2 clients__col">
+                    <a href="#" class="clients__item"><img src="./images/home/partners/04.png" alt="Logo" class="clients__logo"></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="press-center">
+    <div class="press-center__inner inner">
+        <h2 class="press-center__title">Пресс-центр</h2>
+
+        <div class="press-center__for-slider">
+            <div class="press-center__slider slider-items">
+                <a href="#" class="press-center__slider-item slider-items__item">
+                    <div class="slider-items__info">
+                        <div class="press-center__slider-photo slider-items__photo">
+                            <img src="./images/home/news/01.jpg" alt="Photo" class="press-center__slider-img slider-items__img">
+                        </div>
+                        <div class="press-center__slider-text-block slider-items__text">
+                            <p class="press-center__slider-title">Поиски нового типа сверхпроводящих материалов</p>
+                            <p class="press-center__slider-text">В качестве обмоточных проводов используются новые современные марки</p>
+                            <p class="press-center__slider-date">01 окт 2020</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="press-center__slider-item slider-items__item">
+                    <div class="slider-items__info">
+                        <div class="press-center__slider-photo slider-items__photo">
+                            <img src="./images/home/news/02.jpg" alt="Photo" class="press-center__slider-img slider-items__img">
+                        </div>
+                        <div class="press-center__slider-text-block slider-items__text">
+                            <p class="press-center__slider-title">Поиски нового типа сверхпроводящих материалов</p>
+                            <p class="press-center__slider-text">В качестве обмоточных проводов используются новые современные марки</p>
+                            <p class="press-center__slider-date">01 окт 2020</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="press-center__slider-item slider-items__item">
+                    <div class="slider-items__info">
+                        <div class="press-center__slider-photo slider-items__photo">
+                            <img src="./images/home/news/03.jpg" alt="Photo" class="press-center__slider-img slider-items__img">
+                        </div>
+                        <div class="press-center__slider-text-block slider-items__text">
+                            <p class="press-center__slider-title">Поиски нового типа сверхпроводящих материалов</p>
+                            <p class="press-center__slider-text">В качестве обмоточных проводов используются новые современные марки</p>
+                            <p class="press-center__slider-date">01 окт 2020</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="press-center__slider-item slider-items__item">
+                    <div class="slider-items__info">
+                        <div class="press-center__slider-photo slider-items__photo">
+                            <img src="./images/home/news/04.jpg" alt="Photo" class="press-center__slider-img slider-items__img">
+                        </div>
+                        <div class="press-center__slider-text-block slider-items__text">
+                            <p class="press-center__slider-title">Поиски нового типа сверхпроводящих материалов</p>
+                            <p class="press-center__slider-text">В качестве обмоточных проводов используются новые современные марки</p>
+                            <p class="press-center__slider-date">01 окт 2020</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="press-center__slider-item slider-items__item">
+                    <div class="slider-items__info">
+                        <div class="press-center__slider-photo slider-items__photo">
+                            <img src="./images/home/slide-product-1.jpg" alt="Photo" class="press-center__slider-img slider-items__img">
+                        </div>
+                        <div class="press-center__slider-text-block slider-items__text">
+                            <p class="press-center__slider-title">Lorem, ipsum dolor.</p>
+                            <p class="press-center__slider-text">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                            <p class="press-center__slider-date">01 окт 2020</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+</main>
+<footer class="footer">
+
+    <div class="footer-menu">
+        <div class="inner">
+            <div class="row footer-menu__row">
+                <div class="col col-3 footer-menu__col">
+                    <p class="footer-menu__menu"><a href="#" class="footer-menu__menu-link">Продукция</a></p>
+                    <ul class="footer-menu__submenu">
+                        <li class="footer-menu__submenu-item"><a href="#" class="footer-menu__submenu-link">Секции статорных обмоток средневольтных и высоковольтных двигателей </a></li>
+                        <li class="footer-menu__submenu-item"><a href="#" class="footer-menu__submenu-link">Секции для тяговых электродвигателей</a></li>
+                        <li class="footer-menu__submenu-item"><a href="#" class="footer-menu__submenu-link">Волновые катушки</a></li>
+                        <li class="footer-menu__submenu-item"><a href="#" class="footer-menu__submenu-link">Секции для низковольтных двигателей</a></li>
+                        <li class="footer-menu__submenu-item"><a href="#" class="footer-menu__submenu-link">Секции якорных обмоток для двигателей постоянного тока</a></li>
+                    </ul>
+                </div>
+                <div class="col col-3 footer-menu__col">
+                    <p class="footer-menu__menu"><a href="#" class="footer-menu__menu-link">Производство</a></p>
+                    <ul class="footer-menu__submenu">
+                        <li class="footer-menu__submenu-item"><a href="#" class="footer-menu__submenu-link">Производственный процесс</a></li>
+                        <li class="footer-menu__submenu-item"><a href="#" class="footer-menu__submenu-link">Материалы</a></li>
+                        <li class="footer-menu__submenu-item"><a href="#" class="footer-menu__submenu-link">Испытания</a></li>
+                        <li class="footer-menu__submenu-item"><a href="#" class="footer-menu__submenu-link">Упаковка</a></li>
+                        <li class="footer-menu__submenu-item"><a href="#" class="footer-menu__submenu-link">Доставка</a></li>
+                    </ul>
+                    <p class="footer-menu__menu"><a href="#" class="footer-menu__menu-link">Услуги</a></p>
+                </div>
+                <div class="col col-3 footer-menu__col">
+                    <p class="footer-menu__menu"><a href="#" class="footer-menu__menu-link">Пресс-центр</a></p>
+                    <ul class="footer-menu__submenu">
+                        <li class="footer-menu__submenu-item"><a href="#" class="footer-menu__submenu-link">Выпоненные проекты</a></li>
+                        <li class="footer-menu__submenu-item"><a href="#" class="footer-menu__submenu-link">Новости</a></li>
+                        <li class="footer-menu__submenu-item"><a href="#" class="footer-menu__submenu-link">Мероприятия</a></li>
+                        <li class="footer-menu__submenu-item"><a href="#" class="footer-menu__submenu-link">Статьи</a></li>
+                    </ul>
+                </div>
+                <div class="col col-3 footer-menu__col">
+                    <p class="footer-menu__menu"><a href="#" class="footer-menu__menu-link">Холдинг</a></p>
+                    <ul class="footer-menu__submenu">
+                        <li class="footer-menu__submenu-item"><a href="#" class="footer-menu__submenu-link">О компании</a></li>
+                        <li class="footer-menu__submenu-item"><a href="#" class="footer-menu__submenu-link">Контакты</a></li>
+                        <li class="footer-menu__submenu-item"><a href="#" class="footer-menu__submenu-link">Сотрудники</a></li>
+                        <li class="footer-menu__submenu-item"><a href="#" class="footer-menu__submenu-link">Вакансии</a></li>
+                        <li class="footer-menu__submenu-item"><a href="#" class="footer-menu__submenu-link">Клиенты и отзывы</a></li>
+                        <li class="footer-menu__submenu-item"><a href="#" class="footer-menu__submenu-link">Партнерам</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-contacts">
+        <div class="inner">
+            <div class="row footer-contacts__row">
+                <div class="col col-3 footer-contacts__col">
+                    <p class="footer-contacts__name">Адрес</p>
+                    <p class="footer-contacts__value">193315, Санкт-Петербург, <br>пр. Большевиков, д. 52, корп.9</p>
+                    <p class="footer-contacts__note">С понедельника - по пятницу <br>С 8:00 до 18:00 (по мск)</p>
+                </div>
+                <div class="col col-3 footer-contacts__col">
+                    <p class="footer-contacts__name">Телефон</p>
+                    <p class="footer-contacts__value"><a href="tel:+78123212920" class="footer-contacts__link">+7 (812) 321-29-20</a></p>
+                    <p class="footer-contacts__name">Специалисы отдела продаж</p>
+                    <p class="footer-contacts__value"><a href="tel:+78123212920" class="footer-contacts__link">+7 (812) 321-29-20 (5042)</a></p>
+                    <p class="footer-contacts__value"><a href="tel:+78123212920" class="footer-contacts__link">+7 (812) 321-29-20 (5068)</a></p>
+                </div>
+                <div class="col col-3 footer-contacts__col">
+                    <p class="footer-contacts__name">Почта</p>
+                    <p class="footer-contacts__value"><a href="mailto:gm@remcoil.ru" class="footer-contacts__link">gm@remcoil.ru</a></p>
+                    <div class="footer-contacts__btns-block">
+                        <a href="#" class="btn btn--full btn--full-orange-black footer-contacts__btn"><span>Написать нам</span> <svg viewBox="0 0 9 14" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.94 6.406l-5.43-5.16a.917.917 0 00-1.251 0 .811.811 0 000 1.189L6.065 7l-4.806 4.565a.811.811 0 000 1.189.918.918 0 001.251 0l5.431-5.16A.817.817 0 008.2 7a.817.817 0 00-.259-.594z" /></svg></a>
+                    </div>
+                </div>
+                <div class="col col-3 footer-contacts__col">
+                    <p class="footer-contacts__name">Социальные сети</p>
+                    <div class="footer-contacts__social-networks">
+                        <div class="social-networks">
+                            <a href="#" class="social-networks__link social-networks__link--fb">
+                                <svg width="18" height="33" viewBox="0 0 18 33" xmlns="http://www.w3.org/2000/svg"><path d="M16.785 18.117l.887-5.781h-5.547v-3.75c0-1.582.774-3.125 3.258-3.125h2.523V.539S15.617.15 13.43.15c-4.57 0-7.555 2.769-7.555 7.78v4.407H.797v5.781h5.078v13.977c1.02.16 2.063.242 3.125.242 1.063 0 2.105-.082 3.125-.242V18.117h4.66z"/></svg>
+                            </a>
+                            <a href="#" class="social-networks__link">
+                                <svg width="22" height="23" viewBox="0 0 22 23" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.001.67c-2.897 0-3.26.012-4.398.064-1.136.052-1.91.231-2.589.495a5.223 5.223 0 00-1.89 1.23 5.236 5.236 0 00-1.23 1.89C.628 5.027.448 5.802.397 6.937.347 8.075.333 8.44.333 11.336c0 2.897.013 3.26.065 4.397.052 1.136.232 1.91.496 2.589a5.227 5.227 0 001.23 1.89 5.222 5.222 0 001.889 1.23c.678.264 1.454.444 2.589.496 1.138.052 1.501.065 4.398.065s3.26-.013 4.397-.065c1.136-.052 1.912-.232 2.59-.495a5.218 5.218 0 001.889-1.231 5.236 5.236 0 001.23-1.89c.263-.678.443-1.453.496-2.589.052-1.137.065-1.5.065-4.397 0-2.897-.014-3.26-.065-4.398-.053-1.136-.233-1.911-.495-2.59a5.235 5.235 0 00-1.231-1.889 5.213 5.213 0 00-1.89-1.23c-.68-.264-1.455-.443-2.59-.495-1.138-.052-1.5-.065-4.398-.065H11zm-.957 1.921h.957c2.848 0 3.186.01 4.31.062 1.04.047 1.605.221 1.98.367.499.193.854.425 1.227.798.373.373.604.729.798 1.227.146.375.32.94.367 1.98.051 1.124.063 1.462.063 4.309 0 2.846-.012 3.184-.063 4.308-.047 1.04-.221 1.605-.367 1.98a3.298 3.298 0 01-.798 1.226 3.299 3.299 0 01-1.226.798c-.376.146-.94.32-1.98.367-1.125.051-1.463.062-4.31.062-2.85 0-3.187-.01-4.311-.062-1.04-.048-1.605-.222-1.98-.368a3.305 3.305 0 01-1.227-.797 3.306 3.306 0 01-.799-1.226c-.146-.376-.32-.94-.367-1.98-.051-1.125-.061-1.463-.061-4.311 0-2.849.01-3.185.061-4.31.048-1.04.221-1.604.367-1.98.194-.497.425-.853.799-1.226a3.31 3.31 0 011.226-.798c.376-.147.94-.32 1.98-.368.985-.045 1.366-.058 3.354-.06v.002zm5.371 3.051a1.28 1.28 0 112.56 0 1.28 1.28 0 01-2.56 0zm-4.414.216a5.478 5.478 0 100 10.956 5.478 5.478 0 000-10.956zm3.556 5.478a3.556 3.556 0 10-7.112 0 3.556 3.556 0 007.112 0z"/></svg>
+                            </a>
+                            <a href="#" class="social-networks__link">
+                                <svg width="22" height="21" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.432 2.688c0 1.308-.984 2.354-2.564 2.354h-.03c-1.52 0-2.505-1.046-2.505-2.354C.333 1.353 1.347.336 2.898.336c1.55 0 2.505 1.017 2.534 2.352zm-.298 4.213v13.618H.602V6.9h4.532zm16.345 13.618V12.71c0-4.183-2.235-6.13-5.218-6.13-2.406 0-3.484 1.322-4.085 2.25V6.9H7.643c.06 1.278 0 13.618 0 13.618h4.533v-7.605c0-.407.03-.813.149-1.105.328-.813 1.073-1.654 2.326-1.654 1.64 0 2.296 1.248 2.296 3.078v7.286h4.532z"/></svg>
+                            </a>
+                            <a href="#" class="social-networks__link">
+                                <svg width="22" height="16" viewBox="0 0 22 16" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.628.013L8.218.04l-.795.022L6.41.098l-.546.025-.534.029-.515.033-.489.038-.232.021-.434.046a7.199 7.199 0 00-.996.17A2.708 2.708 0 00.78 2.397 9.62 9.62 0 00.57 3.529l-.051.428-.044.44-.036.442-.03.439-.032.63-.022.575-.016.631-.007.63.007.48.016.631.022.575.033.631.03.438.035.443.044.44.024.216.056.419c.05.34.109.655.179.925a2.709 2.709 0 001.886 1.936c.24.066.583.123.996.171l.434.046.232.02.489.039.515.033.534.03.546.024.71.027 1.185.033 1.612.028 1.278.006.723-.005 1.55-.024 1.41-.038.71-.027.545-.025.534-.029.764-.052.473-.04.434-.046c.412-.048.756-.105.996-.17a2.709 2.709 0 001.886-1.937c.084-.324.152-.713.208-1.132l.051-.428.043-.44.036-.443.03-.438.033-.63.022-.576.016-.63.006-.63-.006-.48-.016-.632-.022-.575-.033-.63-.03-.439-.036-.443-.043-.44a17.03 17.03 0 00-.024-.215l-.056-.42c-.05-.34-.109-.655-.18-.924A2.708 2.708 0 0019.336.46a7.202 7.202 0 00-.996-.17l-.434-.046a26.35 26.35 0 00-.233-.02l-.488-.039-.516-.033-.534-.03L15.123.08l-.546-.018L13.28.028l-.907-.015-1.34-.01-1.404.01zM9 11.336V4.669l5.333 3.334L9 11.336z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-info">
+        <div class="inner">
+            <div class="footer-info__logo-block">
+                <a href="index.html" class="footer-info__logo-link"><img src="./images/logo-white.svg" alt="Logo" class="footer-info__logo"></a>
+            </div>
+            <div class="footer-info__links-block">
+                <a href="#" class="footer-info__link">Конфиденциальность</a>
+                <a href="#" class="footer-info__link">Пользовательское соглашение</a>
+            </div>
+            <div class="footer-info__copyright">
+                ООО «РЭМ энд Коил» © 2007-2020 
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+
+</html>
