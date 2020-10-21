@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    // Выбор языка
     var choiseLangBtn = document.querySelector('#language-btn');
     if (choiseLangBtn) {
         choiseLangBtn.addEventListener('click', openChoiseLang);
@@ -18,6 +19,7 @@ $(document).ready(function () {
         }
     }
 
+    // Поиск по сайту
     var searchBtn = document.querySelector('#search-btn');
     if (searchBtn) {
         searchBtn.addEventListener('click', openSearchBlock);
@@ -38,6 +40,7 @@ $(document).ready(function () {
         }
     }
 
+    // Промо-слайдер
     $('#promo-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -50,6 +53,7 @@ $(document).ready(function () {
         speed: 1000
     });
 
+    // Стандартный слайдер
     $('.slider-items').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -74,6 +78,7 @@ $(document).ready(function () {
         ]
     });
 
+    // Воспроизведение видео по клику
     var videoArr = document.querySelectorAll('.video');
     if (videoArr.length !== 0) {
 
@@ -113,8 +118,92 @@ $(document).ready(function () {
             }
         }
 
+    }   
+
+})
+
+$(document).ready(function () { 
+
+    //Form
+    var formInPage = document.querySelectorAll('form');
+    if (formInPage.length !== 0) {
+        for (var formItem = 0; formItem < formInPage.length; formItem++) {
+            formInPage[formItem].addEventListener('submit', validateForm);
+        }
     }
 
+    function validateForm(event) {
+        var form = event.target;
+        var error = validateFields(form); //запускаем проверку полей в этой форме
+
+        if (error === true) { /*если есть ошибка*/
+            event.preventDefault();
+            if (form.querySelector('.form__message')) {
+                form.querySelector('.form__message').classList.add('form__message--error');
+                form.querySelector('.form__message').innerText = "Ошибки заполнения. Пожалуйста, проверьте все поля и отправьте снова.";
+            }
+        }
+        else { /*если нет ошибки - отправляем форму*/
+            event.preventDefault();
+            if (form.querySelector('.form__message')) {
+                form.querySelector('.form__message').classList.remove('form__message--error');
+                form.querySelector('.form__message').classList.add('form__message--ok');
+                form.querySelector('.form__message').innerHTML = "Ваша заявка принята. <br> Мы свяжемся с вами в ближайшее время";
+            }
+            // sendAjaxForm(form); //отправка формы
+            resetForm(form); //очищаем форму
+        }
+    }
+    function validateFields(form) {
+        var error = false;
+        var requredItems = form.querySelectorAll('input[required]');
+
+        for (var item = 0; item < requredItems.length; item++) {
+            if (!requredItems[item].checkValidity()) {
+                requredItems[item].classList.add('form__input--error');
+                error = true;
+            }
+            requredItems[item].addEventListener('input', changeFields); //подписываем на событие input на поле
+            requredItems[item].addEventListener('change', changeFields); //для checkbox/radio
+        }
+        return error;
+    }
+
+    function changeFields(event) {
+        var eventTarget = event.target;
+        if (eventTarget.checkValidity()) {
+            eventTarget.classList.remove("form__input--error");
+
+            if (eventTarget.closest('form').querySelector('.form__message')) {
+                if (eventTarget.closest('form').querySelector('.form__message').classList.contains('form__message--error')) {
+                    var error = validateFields(eventTarget.closest('form'));
+                    if (error === false) {
+                        eventTarget.closest('form').querySelector('.form__message').classList.remove('form__message--error');
+                    }
+                }
+            }
+        }
+    }
+
+    function resetForm(form) {
+        $(form).trigger('reset');
+        setTimeout(() => { if (form.querySelector('.form__message')) { form.querySelector('.form__message').classList.remove('form__message--ok'); } }, 5000);
+    }
+
+    // function sendAjaxForm(dataForm) {
+    //     $.ajax({
+    //         url: dataForm.action, //url страницы jquery-mailer.php
+    //         type: "POST", //метод отправки
+    //         data: $(dataForm).serialize(),  // Сеарилизуем объект
+    //         success: function (response) { //Данные отправлены успешно
+    //             console.log('ok');
+    //         },
+    //         error: function (response) { // Данные не отправлены          
+    //             console.log('error');
+    //         }
+    //     });
+    // };
+    
 })
 
 /*Полифилы для ie*/

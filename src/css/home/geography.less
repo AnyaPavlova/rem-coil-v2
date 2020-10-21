@@ -1,27 +1,85 @@
 .geography {
-    background: @color-blue;
+    padding: 212px 0 100px;
 
-    &__title-block {
+    &__block {
+        max-width: 1920px;
+        margin: auto;
+        position: relative;
+        min-height: 600px;
+        // display: flex;
+        // flex-wrap: wrap;
+        // align-content: center;
+        // align-items: center;
+
+        @media screen and (max-width: 1800px) {
+            min-height: auto;
+        }
+    }
+
+    &__map-block {
         position: absolute;
-        width: 100%;
-        left: 0;
-        right: 0;
-        top: 0;
-        padding: 15px;
-        background: rgba(255, 255, 255, 0.8);
+        left: 41px;
+        top: 0;      
+
+        @media screen and (max-width: 1800px) {
+            left: 0;
+            max-width: 60%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__row {
+        justify-content: flex-end;
     }
     &__title {
-        color: @color-blue;
-        text-align: center;
-    }
-    &__map {
-        margin: 0 auto 0 70px;
+        margin-bottom: 30px;
+        padding-top: 18px;
 
-        @media screen and (min-width: 1921px) {
-            margin: auto;
-        }
-        @media screen and (max-width: 1440px) { 
-            margin: auto;
+        font-size: 36px;
+        text-transform: uppercase;
+    }
+    &__title-name {
+        display: inline-block;
+        padding: 0 0px 7px 35px;
+        margin-left: -35px;
+        box-shadow: 0px 4px 0px #F7931D;   
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 13px;
+        margin-left: -12px;
+        margin-right: -12px;
+
+        li {
+            min-width: 21%;
+            // width: 25%;
+            padding: 0 12px 12px;
+            font-size: 22px;
+            color: @color-dark-gray;
+
+            @media screen and (max-width: 1380px) {
+                font-size: 18px;
+            }
         }
     }
+
+    &__link {
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    &__form {
+        padding-top: 50px;
+        max-width: 460px;
+    }
+    &__form-title {
+        padding-bottom: 30px;
+        color: @color-dark-gray;
+    }
+
+
 }

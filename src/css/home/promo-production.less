@@ -1,5 +1,5 @@
 .promo-production {
-    margin-top: -55px;
+    padding-top: 160px;
     padding-bottom: 120px;
 
     &__title {
@@ -10,12 +10,13 @@
         align-content: center;
         align-items: center;
         justify-content: space-between;
-        padding-bottom: 27px;
+        padding-bottom: 36px;
     }
     &__text {
-        font-size: 20px;
+        font-size: 22px;
         line-height: 1.4;
-        max-width: 800px;
+        max-width: 982px;
+        padding-right: 24px;
     }
 
     &__slider-photo {
@@ -24,28 +25,28 @@
     }
 
     &__slider-text-block {
-        padding: 20px 0 25px;
+        padding: 20px 0 45px;
         position: relative;
 
         &:after {
             content: '';
             display: block;
-            background: #BDBDBD;
+            background: #000000;
             width: 180px;
             max-width: 100%;
-            height: 4px;
+            height: 2px;
             position: absolute;
             bottom: 0;
             left: 0;
-            transition: all 0.5s;
+            // transition: all 0.5s;
         }
     }
     &__slider-text {
         font-size: 18px;
-        font-weight: 500;
-        color: #4F4F4F;
+        font-weight: 400;
+        color: #000000;
         line-height: 1.3;
-        transition: all 0.5s;
+        // transition: all 0.5s;
     }
     
 }
@@ -54,9 +55,12 @@
     .promo-production__slider-item:hover {
         .promo-production__slider-text {
             color: @color-dark-orange;
+            font-weight: 700;
         }
         .promo-production__slider-text-block:after {
             background: @color-dark-orange;
+            height: 4px;
+            bottom: -1px;
         }
     }
 }
